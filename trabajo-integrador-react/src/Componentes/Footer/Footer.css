@@ -13,3 +13,30 @@
     text-align: center; /* Centra el texto horizontalmente */
   }
   
+  /* comienza el footer */
+
+.footer-index {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(40, 46, 51);
+    padding: 15px;
+    position: relative;
+}
+
+
+.nombres-footer {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
+    width: 10%;
+}
+
+.logo-db {
+    width: 35%;
+}
+
+#texto-footer {
+    align-self: center;
+}
