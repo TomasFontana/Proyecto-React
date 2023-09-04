@@ -1,9 +1,15 @@
+import React from "react";
 
-import Footer from './components/Footer/Footer';
+import Navbar from "./Componentes/Navbar/Navbar";
+
+import Footer from './Componentes/Footer/Footer';
+
 
 function App() {
   return (
     <div className="App">
+      {/* componente header como nav */}
+      <Navbar />
       {/* Contenido principal de tu aplicación */}
       <h1>Mi Aplicación React</h1>
       {/* Agrega el componente Footer al final de la aplicación */}
