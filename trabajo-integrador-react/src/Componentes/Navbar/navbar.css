@@ -1,19 +1,33 @@
-.nav-header {
-    width: 100%;
-}
-
-header {
-    background-color: rgb(40, 46, 51);
-}
-
-.logo {
-    width: 10%;
-}
-
-.h1-header {
-    font-family: 'Urbanist', sans-serif;
-    color: white;
-    align-self: center;
-    margin-right: 25%;
-
-}
+/* Estilos generales de la barra de navegación */
+nav {
+    background-color: #333; /* Cambia el color de fondo según tu preferencia */
+    padding: 10px;
+  }
+  
+  /* Estilos para la lista de enlaces en la barra de navegación */
+  ul.main-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra los elementos en horizontal */
+  }
+  
+  /* Estilos para cada elemento de la lista de enlaces */
+  ul.main-nav li {
+    margin: 0 10px; /* Espacio entre elementos, ajusta según necesites */
+  }
+  
+  /* Estilos para los enlaces */
+  ul.main-nav li a {
+    text-decoration: none;
+    color: #fff; /* Cambia el color de los enlaces según tu preferencia */
+    font-weight: bold;
+    font-size: 16px; /* Ajusta el tamaño de fuente según necesites */
+    transition: color 0.3s ease; /* Transición suave al cambiar el color */
+  }
+  
+  /* Estilos para los enlaces cuando están en estado "hover" (sobre ellos) */
+  ul.main-nav li a:hover {
+    color: #0dff00; /* Cambia el color al pasar el cursor sobre los enlaces */
+  }
