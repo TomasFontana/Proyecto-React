@@ -2,18 +2,14 @@
     width: 100%;
 }
 
-header {
-    background-color: rgb(40, 46, 51);
-}
-
 .logo {
     width: 10%;
 }
 
-.h1-header {
+nav {
     font-family: 'Urbanist', sans-serif;
     color: white;
     align-self: center;
     margin-right: 25%;
-
+    background-color: rgb(40, 46, 51);
 }
