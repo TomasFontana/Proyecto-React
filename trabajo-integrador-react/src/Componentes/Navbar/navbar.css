@@ -30,5 +30,13 @@ nav {
   
   /* Estilos para los enlaces cuando están en estado "hover" (sobre ellos) */
   ul.main-nav li a:hover {
-    color: #0dff00; /* Cambia el color al pasar el cursor sobre los enlaces */
+    color: #c3ff00; /* Cambia el color al pasar el cursor sobre los enlaces */
   }
+  div.Logo {
+    justify-content: center;
+}
+
+div.Logo img {
+    width: 100px;
+    padding: 7px 0px 5px 0px;
+}
