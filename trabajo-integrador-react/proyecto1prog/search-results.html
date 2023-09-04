@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados - DH Movies</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist&display=swap" rel="stylesheet">
+</head>
+<body class="body-index">
+    
+    <header class="menu-index">
+        <div class="header-index">
+            <img class="logo" src="img/logo.PNG" alt="Logo dhmovies">
+            <h1 class="h1-header"> DH Movies - The best site for movies and series</h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home </a></li>
+                <li><a href="favoritos.html">Favorites </a></li>
+                <li><a href="generos.html">Genres </a></li>
+            </ul>
+        </nav>
+        <div class="buscador">
+            <form id="form-busqueda" action="search-results.html" method="GET">
+                <input id="busqueda-text" class="casillero" type="text" name="busqueda" placeholder="Search...">
+                <input class="boton" type="submit" value="Search">
+            </form>
+        </div>
+    </header>
+
+    <main>
+ 
+
+ <section>
+<h2 class="h2-proximamente">Search Results</h2>
+<h3 class="h2-proximamente">Movies</h2>
+<div id="results-movies" class="lista-cartelera-series"></div>
+<h3 class="h2-proximamente">Series</h2>
+<div id="results-series" class="lista-cartelera-series"></div>
+<!--
+<h3 class="titulos-peliculas"> <a href="detail-movie.html" class="titulo-resultados">No Respires 2</a></h3>
+     
+ <div class="resultados">
+   <article class="article-resultados">
+    <a href="detail-movie.html">
+    <img class="portadas" src="img/peliculas/norespires.jpeg" alt="norespires"></a>    
+</article>
+
+<article class="resultado-texto">
+<p class="texto-busqueda">Unos jóvenes ladrones creen haber encontrado la oportunidad de cometer el robo perfecto. Su objetivo será un ciego solitario, poseedor de miles de dólares ocultos. Pero tan pronto como entran en su casa serán conscientes de su error, pues se encontrarán atrapados y luchando por sobrevivir contra un psicópata con sus propios y temibles secretos. </p>
+</article>
+
+</section>
+
+<h2 class="resultados-similares">Resultados similares</h2>
+<section class="lista-cartelera">
+<article class="listados"> 
+        <h3 class="titulos-peliculas"> <a href="detail-movie.html" class="a-titulo">Candy Man</a></h3>
+    <a href="detail-movie.html">
+    <img class="portadas" src="img/peliculas/candyman.jpeg" alt="candyman"></a>    
+</article>
+
+<article class="listados"> 
+        <h3 class="titulos-peliculas"> <a href="detail-movie.html" class="a-titulo">Jacusse</a></h3>
+    <a href="detail-movie.html">
+    <img class="portadas" src="img/peliculas/jaccuse.jpeg" alt="jaccuse"></a>    
+</article>
+
+<article class="listados">
+         <h3 class="titulos-peliculas"> <a href="detail-movie.html" class="a-titulo">El Padre</a></h3>
+    <a href="detail-movie.html">
+    <img class="portadas" src="img/peliculas/elpadre.jpeg" alt="elpadre"></a>    
+</article>
+
+<article class="listados"> 
+        <h3 class="titulos-peliculas"> <a href="detail-movie.html" class="a-titulo">Martin Eden</a></h3>
+    <a href="detail-movie.html">
+    <img class="portadas" src="img/peliculas/martineden.jpeg" alt="martineden"></a>    
+</article>
+
+<article class="listados"> 
+    <h3 class="titulos-peliculas"> <a href="detail-movie.html" class="a-titulo">Clickbait</a></h3>
+<a href="detail-movie.html">
+<img class="portadas" src="img/peliculas/clickbait.jpeg" alt="clickbait"></a>    
+</article>
+ </div>
+-->
+</section>
+    </main>
+
+    <footer class="footer-index">
+        <div class="nombres-footer">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img class= "logo-db" src="img/logodatabase.svg" alt="logo dhmovies"></a>
+            </div>
+            <div id="texto-footer">
+    <p class="generos-texto"> Federico Fullone, Tomas Fontana, Antonia Reynal.</p></div>
+         
+        </div>
+    
+    </footer>
+<!--<script src="js/index.js"></script>-->
+<script src="js/buscador.js"></script>
+
+</body>
+</html>
