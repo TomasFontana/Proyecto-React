@@ -1,0 +1,549 @@
+/* css de index */
+/*Especificaciones body*/
+* {
+    box-sizing: border-box;
+}
+
+.body-index {
+    background-color: rgb(49, 57, 64);
+    margin: 0 auto;
+}
+
+.nav-header {
+    width: 100%;
+}
+
+header {
+    background-color: rgb(40, 46, 51);
+}
+
+.logo {
+    width: 10%;
+}
+
+.h1-header {
+    font-family: 'Urbanist', sans-serif;
+    color: white;
+    align-self: center;
+    margin-right: 25%;
+
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 0%;
+    font-family: 'Urbanist', sans-serif;
+    text-transform: uppercase;
+
+
+}
+
+.header-index {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menu li a {
+    background-color: rgb(42, 47, 51);
+    padding: 10px;
+    border: groove white 2px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu li {
+    margin: 15px;
+    list-style: none;
+}
+
+.buscador {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/*Comienza el main*/
+
+.h2-proximamente {
+    font-family: 'Urbanist', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.h2-titulos {
+    font-family: 'Urbanist', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    padding: 5px 0px 5px 15px;
+    background-color: rgb(40, 46, 51);
+    width: 100%;
+
+}
+.h2-titulos-favoritos {
+    font-family: 'Urbanist', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    padding: 5px 0px 5px 15px;
+    background-color: rgb(40, 46, 51);
+    width: 100%;
+
+}
+
+
+.listados {
+    padding: 16px;
+    margin: 30px;
+    width: 150px !important;
+}
+
+.portadas {
+    width: 150px;
+    height: 200px;
+}
+
+.titulos-peliculas {
+    font-family: 'Urbanist', sans-serif;
+    color: white;
+    width: 100%;
+    text-decoration: none;
+}
+
+.a-titulo,
+.generos-texto,
+.a-generos {
+    text-decoration: none;
+    color: white;
+}
+
+.lista-cartelera,
+.lista-cartelera-series,
+.lista-cartelera-peliculas-vistas,
+.section-favoritos-peliculas,
+.section-favoritos-series  {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.foto-proximamente {
+    width: 40%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.upcoming {
+    display: flex;
+    justify-content: center;
+
+}
+
+/* comienza el footer */
+
+.footer-index {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(40, 46, 51);
+    padding: 15px;
+    position: relative;
+}
+
+
+.nombres-footer {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
+    width: 10%;
+}
+
+.logo-db {
+    width: 35%;
+}
+
+#texto-footer {
+    align-self: center;
+}
+
+/* comienzo del css de detail-movie */
+
+.body-detail-movie {
+    background-color: rgb(49, 57, 64);
+    margin: 0px;
+    font-family: 'Urbanist', sans-serif;
+    color: white;
+}
+
+.h1-detail-movie {
+    text-align: center;
+    font-weight: bold;
+    margin: 50px;
+    text-transform: uppercase;
+
+
+}
+
+.section-detail-movie {
+    display: flex;
+    flex-direction: row;
+    margin: 30px 40px 50px 40px;
+    width: 60%;
+}
+
+
+.clase-texto-detail-movie {
+    font-weight: 80;
+    color: white;
+}
+
+
+
+.boton-favoritos {
+    color: white;
+    text-decoration: none;
+    margin-left: 20%;
+    cursor: pointer;
+    text-transform: uppercase;
+
+
+}
+
+.vaciar-favoritos {
+    background-color: rgb(42, 47, 51);
+    padding: 10px;
+    border: groove white 2px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    width: 274px;
+    margin-left: 40%;
+    margin-top: 40px;
+
+
+}
+
+.a-vaciar-favoritos {
+    text-decoration: none;
+}
+
+.texto-boton {
+    width:100%;
+}
+
+.boton-favoritos:hover,
+.vaciar-favoritos:hover {
+    background-color: rgb(61, 70, 77);
+}
+
+/* comienza el css de detail serie */
+
+.body-detail-serie {
+    background-color: rgb(49, 57, 64);
+    margin: 0px;
+    ;
+    font-family: 'Urbanist', sans-serif;
+    color: white;
+}
+
+.section-detail-serie {
+    display: flex;
+    flex-direction: row;
+    margin: 30px 40px 50px 40px;
+    width: 60%;
+}
+
+.h1-detail-serie {
+    text-align: center;
+    font-weight: bold;
+    margin: 50px;
+    text-transform: uppercase;
+}
+
+
+.clase-texto-detail-serie,
+.a-li-detail-serie {
+    font-weight: 80;
+    color: white;
+    text-decoration: none;
+
+}
+
+.imagen-detail-series {
+    height: 368px;
+    width: 270px;
+}
+
+/* Comienza pagina de resultados */
+.resultados {
+    display: flex;
+    flex-direction: row;
+    margin: 15px 15px 50px 15px;
+}
+
+.texto-busqueda {
+    width: 65%;
+    margin-left: 30px;
+    font-family: 'Urbanist', sans-serif;
+    color: white;
+
+}
+
+.titulo-resultados {
+    font-family: 'Urbanist', sans-serif;
+    color: white;
+    margin-left: 2%;
+    text-decoration: none;
+}
+
+.resultados-similares {
+    font-family: 'Urbanist', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    background-color: rgb(40, 46, 51);
+    font-size: 30px;
+}
+
+/* comienza el css de favoritos */
+
+.favoritos {
+    background-color: rgb(49, 57, 64);
+    margin: 0px;
+    font-family: 'Urbanist', sans-serif;
+    color: white;
+}
+
+/*.section-favoritos-peliculas , .section-favoritos-series {
+    display: flex;
+    margin: 40px 10px 20px 40px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+
+}*/
+
+.h1-favoritos {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 30px;
+    width: 100%;
+    font-size: 35px;
+}
+
+.article-favoritos {
+    padding: 16px;
+    margin: 22px 30px;
+    width: 15%;
+}
+
+.img-span {
+    width: 100%;
+    height: 280px;
+
+}
+
+/* comienza el css de generos */
+
+
+.body-generos {
+    background-color: rgb(49, 57, 64);
+    margin: 0px;
+}
+
+.lista-generos-peliculas,
+.lista-generos-series {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.h2-titulos-generos {
+    text-align: center;
+    font-family: 'Urbanist', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: rgb(142, 156, 94);
+    border-style: ridge;
+
+}
+.a-h2-titulos-generos{
+    text-decoration: none;
+    color: white;
+
+}
+
+.img-generos {
+    width: 100%;
+    height: 400px;
+}
+
+.listados-generos {
+    padding: 16px;
+    margin: 30px;
+    width: 20%;
+
+}
+
+
+.h1-generos {
+    text-decoration: none;
+    font-family: 'Urbanist', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.generos-texto {
+    font-family: 'Urbanist', sans-serif;
+    color: white;
+}
+
+/* Comienza el css responsive */
+
+@media (max-width:420px) {
+
+
+    .listados {
+        width: 48%;
+        margin: 1px;
+        padding: 0px;
+    }
+
+    .foto-proximamente,
+    .h2-proximamente {
+        display: none;
+    }
+
+    .a-titulo {
+        font-size: 12px;
+    }
+
+    .h2-titulos {
+        font-size: 25px;
+        width: 100%;
+    }
+
+    .menu li {
+        margin: 2%;
+    }
+
+    .h1-header {
+        font-size: 25px;
+        margin-left: 15px;
+    }
+
+    .generos-texto,
+    .a-generos {
+        font-size: 10px;
+    }
+
+    /* Favoritos responsive */
+    .section-favoritos {
+        margin: 0%;
+        justify-content: center;
+    }
+
+    .article-favoritos {
+        width: 48%;
+        margin: 0%;
+    }
+
+    .img-span {
+        height: 200px;
+    }
+
+    .h1-favoritos {
+        font-size: 25px;
+        margin-left: 5%;
+    }
+
+    .listados-generos {
+        width: 48%;
+        margin: 0%;
+    }
+
+    .vaciar-favoritos{
+        margin-left: 15%;
+    }
+
+    /*Generos responsive*/
+    .img-generos {
+        width: 100%;
+        height: 200px;
+    }
+
+    .h2-titulos-generos {
+        font-size: 20px;
+
+    }
+    
+
+    /*Resultados responsive*/
+    .resultados {
+        display: block;
+    }
+
+    .article-resultados {
+        margin-left: 20%;
+    }
+
+    .resultado-texto {
+        margin-left: 10%;
+        margin-bottom: 10%;
+    }
+
+    .titulo-resultados {
+        margin-left: 30%;
+    }
+
+    /* responsive detalles peliculas */
+    .section-detail-movie {
+        display: block;
+        width: 70%;
+    }
+
+    .imagen-detail-movie {
+        width: 90%;
+    }
+
+    .article-img {
+        margin-left: 25%;
+    }
+
+    .articulo-detail-movie {
+        margin-left: 10%;
+        margin-bottom: 10%;
+    }
+
+    /* responsive detalles series */
+    .imagen-detail-series {
+        width: 90%;
+        height: 230px;
+    }
+
+    .boton-favoritos{
+        margin-left: 0;
+    }
+
+
+
+
+
+}
+body{
+    background-color: black;
+}

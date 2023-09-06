@@ -1,18 +1,18 @@
 import React from "react";
 import Navbar from "./Componentes/Navbar/Navbar";
 import Footer from './Componentes/Footer/Footer';
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./Paginas/Inicio";
+import "./App.css";
+
 
 
 function App() {
   return (
-    <div className="App">
-      {/* componente header como nav */}
-      <Navbar />
-      {/* Contenido principal de tu aplicación */}
-      <h1>Mi Aplicación React</h1>
-      {/* Agrega el componente Footer al final de la aplicación */}
-      <Footer />
-    </div>
+   <Routes>
+    <Route element={<HomePage/>} path="/" />
+    <Route element={<h1>Nosotros</h1>} path="/nosotros" />
+   </Routes>
   );
 }
 
