@@ -1,7 +1,7 @@
 import {useState} from "react";
-
+import AgregarFavoritos from "../AgregarFavoritos/AgregarFavoritos";
 const ItemListSeriePopular = (props) => {
-    const [mostrarDetalle, setmostrarDetalle] = useState (false)
+    const [esVisible, setesVisible] = useState (false)
     return(
 <article className="listados">
         <div>
@@ -10,15 +10,16 @@ const ItemListSeriePopular = (props) => {
         </a>
             </div>
         <h3 className="titulos-peliculas"><a href={`detail-serie.html?id=${props.serie.id}`} className="a-titulo">{props.serie.name}</a></h3>
-    <button onClick={()=>{setmostrarDetalle(!mostrarDetalle)}} >Mostrar/Ocultar Detalle</button>
-    {mostrarDetalle && (
+    <button onClick={()=>{setesVisible(!esVisible)}} >Ver Mas</button>
+    {esVisible && (
         <div>
             <p className="generos-texto"><a href={`detail-serie.html?id=${props.serie.id}`} className="a-titulo">{props.serie.overview}</a></p>
         </div>
     )}
 
-    <p className="generos-texto"><a href={`detail-serie.html?id=${props.serie.id}`} className="a-titulo"> See more ✓ </a></p>
-
+    <p className="generos-texto"><a href={`detail-serie.html?id=${props.serie.id}`} className="a-titulo"> Ir a Detalle </a></p>
+    
+    <AgregarFavoritos categoria="serie" id={props.serie.id}/>
 
 </article>
     )

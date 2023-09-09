@@ -1,4 +1,11 @@
+import { useState } from "react"
+import AgregarFavoritos from "../AgregarFavoritos/AgregarFavoritos"
+
 const ItemListPeliculaPopular = (props) => {
+    const [esVisible, setesVisible] = useState (false) //variable que se usa en la vista que muestra o oculta contenido
+    const alternarVisibilidad = () => {
+        setesVisible(!esVisible)
+    }
     return(
         <article className="listados">
             <div>
@@ -8,9 +15,15 @@ const ItemListPeliculaPopular = (props) => {
             </div>
 
         <h3 className="titulos-peliculas"><a href={`detail-movie.html?id=${props.pelicula.id}`} className="a-titulo">{props.pelicula.title}</a></h3>
-        <p className="generos-texto"><a href={`detail-movie.html?id=${props.pelicula.id}`} className="a-titulo">{props.pelicula.release_date}</a></p>
-        <p className="generos-texto"><a href={`detail-movie.html?id=${props.pelicula.id}`} className="a-titulo"> See more ✓ </a> </p>
+        <button onClick={alternarVisibilidad}>Ver Mas</button>
+        {esVisible && (
+            <div>
+                <p className="generos-texto">{props.pelicula.overview}</p>
+            </div>
+        )}
+        <p className="generos-texto"><a href={`detail-movie.html?id=${props.pelicula.id}`} className="a-titulo"> Ir a Detalle </a> </p>
 
+        <AgregarFavoritos categoria="movie" id={props.pelicula.id}/>
 
     </article>
     )
