@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import ItemListPeliculaPopular from "../Componentes/ItemListPeliculaPopular/ItemListPeliculaPopular"
 import ItemListSeriePopular from "../Componentes/ItemListSeriePopular/ItemListSeriePopular"
+import { Form, useNavigate, useRoutes } from "react-router-dom"
 
 const HomePage = () => {
     const [peliculasPopulares, setpeliculasPopulares] = useState([])
@@ -20,8 +21,20 @@ const HomePage = () => {
         } //await es para esperar la promesa fetch
         cargarDatos().then()
     }, [])
+    const [busqueda, setbusqueda] = useState("")
+    const navigate = useNavigate()
+    const handleOnSearchForm = (event) => {
+event.preventDefault()
+navigate("/busqueda/" + busqueda)
+    }
     return (
         <main>
+            <nav>
+                <form onSubmit={handleOnSearchForm}>
+                    <input type="search" name="busqueda" placeholder="busca peliculas o series" onChange={(event)=>{setbusqueda(event.target.value.toLowerCase()); console.log(event.target.value)}}></input>
+                    <button type="submit">buscar</button>
+                </form>
+            </nav>
             <section className="lista-cartelera-series">
                 <h2 className="h2-titulos">Popular series</h2>
                 {seriesPopulares.map(serie => (<ItemListSeriePopular key={serie.id} serie={serie} />))}

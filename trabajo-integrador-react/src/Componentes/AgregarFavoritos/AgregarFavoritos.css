@@ -1,0 +1,18 @@
+/* #caf279 */
+
+.agregarFavoritos-container {
+    display: flex;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(255,255,255,0.75);
+    justify-content: center;
+    padding: 8px;
+}
+
+.agregarFavoritos-container > .agregarFavoritos-item > i{
+    font-size: 1rem;
+    color:#caf279;
+}
