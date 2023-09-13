@@ -1,0 +1,19 @@
+.error {
+    color: red;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .error-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+  }
+  
+  .error-link:hover {
+    text-decoration: underline;
+  }
