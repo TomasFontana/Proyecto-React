@@ -96,7 +96,7 @@ class Inicio extends Component {
                         {/*  Seccion de peliculas populares */}
                         <div className='titulo-vermasall'>
                             <h2 className="title-condiv">Peliculas Populares</h2>
-                            <Link to='/populares'>
+                            <Link to='/PeliculasTodas'>
                                  Ver Todas
                             </Link>
                         </div>
@@ -109,7 +109,7 @@ class Inicio extends Component {
                         {/* Seccion de peliculas en Estreno */}
                         <div className='titulo-vermasall'>
                             <h2 className="titulo-series">Series Populares</h2>
-                            <Link to='/estrenos'>
+                            <Link to='/SeriesTodas'>
                                  Ver Todas
                             </Link>
                         </div>

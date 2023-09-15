@@ -10,6 +10,8 @@ import PeliculasPopulares from "./Paginas/PeliculasPopulares";
 import Favoritos from "./Paginas/Favoritos/Favoritos";
 import Error from "./Componentes/Error/Error";
 import Inicio from "./Paginas/Inicio/Inicio";
+import VerMasSeries from "./Paginas/VerMasSeries/VerMasSeries";
+import VerMasPeliculas from "./Paginas/VerMasPeliculas/VerMasPeliculas";
 
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
     <Route element={<DetallePelicula/>} path="/detalle/movie/:id" />
     <Route element={<PeliculasPopulares/>} path="/PeliculasPopulares"/>
     <Route element={<Favoritos/>} path="/Favoritos"/>
+    <Route element={<VerMasSeries/>} path="/SeriesTodas"/>
+    <Route element={<VerMasPeliculas/>} path="/PeliculasTodas"/>
     <Route element={<h1>Nosotros</h1>} path="/nosotros" />
     <Route component={<Error/>} path="" />
    </Routes>

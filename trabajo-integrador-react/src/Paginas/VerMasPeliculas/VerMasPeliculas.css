@@ -1,0 +1,88 @@
+/* CSS para el componente VerMasPeliculas */
+
+.buscador-home {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: calc(100% - 40px);
+    background-color: black;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .buscador-home h2 {
+    font-size: 25px;
+    margin: 0px 0px 0px 20px;
+  }
+  
+  .buscador-home form {
+    display: flex;
+  }
+  
+  .buscador-home form input {
+    border: none;
+    border-bottom: solid 2px rgb(255, 255, 255);
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    font-weight: 600;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .buscador-home form button {
+    background-color: rgb(0, 0, 0);
+    border: none;
+    border-bottom: solid 2px rgb(255, 255, 255);
+    font-size: 20px;
+  }
+  
+  .buscador-home form button:hover {
+    cursor: pointer;
+  }
+  
+  .buscador-home form button i {
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+  }
+  
+  .title-home {
+    margin: 40px 20px 20px 20px;
+    font-size: 35px;
+    color: #c3ff00;
+  }
+  
+  .cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 30px 20px 20px 10px;
+  }
+  
+  .div-vermas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .load-more {
+    background-color: #c3ff00;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: 600;
+    border: solid 2px rgb(0, 0, 0);
+    cursor: pointer;
+  }
+  
+  .load-more:hover {
+    background-color: rgb(0, 0, 0);
+    color: #c3ff00;
+    border: solid 2px #c3ff00;
+  }
+  
