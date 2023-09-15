@@ -1,0 +1,106 @@
+
+section.ContenedorCarta{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 30px 20px 20px 10px;
+}
+
+.titulo-series{
+    margin: 40px 20px 20px 20px;
+    font-size: 35px;
+    color: #c3ff00;
+}
+
+.title-condiv{
+    margin: 40px 20px 20px 0px;
+    font-size: 35px;
+    color: #c3ff00;
+}
+
+.buscador-inicio{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: calc(100% - 40px);
+    background-color: black;
+    color: rgb(255,255,255);
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.buscador-inicio form{
+    display: flex;
+}
+
+.buscador-inicio form input {
+    border: none;
+    border-bottom: solid 2px rgb(255,255,255);
+    font-size: 20px;
+    color: rgb(255,255,255);
+    background-color: rgb(0,0,0);
+    font-weight: 600;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.buscador-inicio form button {
+    background-color: rgb(0,0,0);
+    border: none;
+    border-bottom: solid 2px rgb(255,255,255);
+    font-size: 20px;
+}
+
+.buscador-inicio form button:hover{
+    cursor: pointer;
+}
+
+.buscador-inicio form button i {
+    border: none;
+    color: rgb(255,255,255);
+    background-color: rgb(0,0,0);
+}
+
+.buscador-inicio h2 {
+    font-size: 25px;
+    margin: 0px 0px 0px 20px;
+}
+
+.loader{
+    height: 100vh;
+    width: 100%;
+}
+
+.titulo-vermasall{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.titulo-vermasall a{
+    background-color:#c3ff00 ;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: 600;
+    border: solid 2px rgb(0, 0, 0)
+}
+
+.titulo-vermasall a:hover{
+    background-color: rgb(0, 0, 0);
+    color:#c3ff00;
+    border: solid 2px #c3ff00;
+}
+
+.titulo-vermasall:last-of-type{
+    border-top: solid 4px rgb(0,0,0);
+}
+
+.lupa{
+    color: rgb(255,255,255);
+}
