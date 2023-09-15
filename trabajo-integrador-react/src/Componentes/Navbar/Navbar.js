@@ -12,7 +12,7 @@ function Navbar (){
             <ul className="main-nav">
                <li><Link to="/">Inicio</Link></li>
                <li><Link to="/favoritos">Favoritos</Link></li>
-               <li><Link to="/peliculasPopulares">Peliculas populares</Link></li>
+               <li><Link to="/PeliculasPopulares">Peliculas populares</Link></li>
                <li><Link to="/PeliculasCartel">Cartelera</Link></li>
             </ul>
 

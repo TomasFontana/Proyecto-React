@@ -21,7 +21,7 @@ const ItemListPeliculaPopular = (props) => {
                 <p className="generos-texto">{props.pelicula.overview}</p>
             </div>
         )}
-        <p className="generos-texto"><a href={`DetalleDeUnaPelicula=${props.pelicula.id}`} className="a-titulo"> Ir a Detalle </a> </p>
+        <p className="generos-texto"><a href={`DetallePelicula=${props.pelicula.id}`} className="a-titulo"> Ir a Detalle </a> </p>
 
         <AgregarFavoritos categoria="movie" id={props.pelicula.id}/>
 
