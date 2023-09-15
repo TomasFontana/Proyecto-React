@@ -2,28 +2,40 @@ import React, { Component } from "react";
 import { useEffect, useState } from "react"
 import TarjetaDetallePelicula from "../Componentes/DetallePelicula/TarjetaDetallePelicula"
 import { Form, useNavigate, useRoutes } from "react-router-dom"
+import { withRouter } from '../Componentes/WithRouter/WithRouter'
 
 
 class DetallePelicula extends Component{
 
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
-            peliculas : [],
+            pelicula : undefined,
         }
     }
 
     componentDidMount(){
+        const id = this.props.match.params.id
+        console.log(id)
 
         fetch("https://api.themoviedb.org/3/movie/changes")
+        .then(response => response.json().then (data => this.setState({
+            pelicula: data
+        })))
         
+    }
+
+    render(){
+        return(
+            <h1>Detalle Pelicula</h1>
+        )
     }
 
 
 
 }
 
-export default DetallePelicula; 
+export default withRouter(DetallePelicula); 
 
 
 
