@@ -59,3 +59,12 @@ const AgregarFavoritos = (props) => {
 };
 
 export default AgregarFavoritos;
+
+//Chequear que las peliculas sean un componente con estado 
+
+//Agregar un boton de favs
+//tiene que cambiar cuando este o no en el array 
+// Evento(onClick) y un metodo, uno o mas metodos
+//DidMount chequear si la pelicula esta o no en el array 
+
+//recuperar datos del array y mostrarlo en una pagina de Favoritos
