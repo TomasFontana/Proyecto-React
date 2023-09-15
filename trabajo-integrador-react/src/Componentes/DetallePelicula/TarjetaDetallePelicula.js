@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-class DetallePelicula extends Component {
+class TarjetaDetallePelicula extends Component {
 
     constructor(props){
         super(props)
@@ -34,15 +34,31 @@ class DetallePelicula extends Component {
     agregarAFavoritos(id){
         //Agregar un id dentro de un array y colocar ese array en localstorage
         let arrayFavoritos = []
-        arrayFavoritos.push(id)
+        let recuperoStorage = localStorage.getItem('favoritos');
+
+        if(recuperoStorage !== null){
+            arrayFavoritos = JSON.parse(recuperoStorage);
+        }
+
+        if(arrayFavoritos.includes(this.props.peliculas.id)){
+            //Si el id esta en el array, queremos sacar el id
+
+            arrayFavoritos = arrayFavoritos.filter(unId => unId !== this.props.peliculas.id);
+            this.setState =({
+                textoBoton: "Agregar a favoritos"
+            })
+
+        } else {
+            arrayFavoritos.push(id);
+
+            this.setState({
+                textoBoton: "Quitar de favoritos"
+            })
+        }
 
         //Subirlo a local storage  strigifeado
         let arrayFavoritosAString = JSON.stringify(arrayFavoritos)
         localStorage.setItem('favoritos', arrayFavoritosAString)
-
-        this.setState({
-            textoBoton: "Quitar de favoritos"
-        })
     }
 
     render(){
@@ -55,12 +71,10 @@ class DetallePelicula extends Component {
              </div>
 
             <h3 className="titulos-peliculas"><a href={`detail-movie.html?id=${this.props.pelicula.id}`} className="a-titulo">{this.props.pelicula.title}</a></h3>
-            <button onClick={alternarVisibilidad}>Ver Mas</button>
-            {esVisible && (
+            <button>Ver Mas</button>
              <div>
                  <p className="generos-texto">{this.props.pelicula.overview}</p>
              </div>
-            )  }
 
             <p>{this.props.pelicula.rating}</p>
             <p>{this.props.pelicula.fechadeestreno}</p>
@@ -76,6 +90,18 @@ class DetallePelicula extends Component {
     }
 }
 
+export default TarjetaDetallePelicula;
+
+        // let arrayFavoritos = []
+        // let recuperoStorage = localStorage.getItem('favoritos');
+
+        // if(recuperoStorage !== null){
+        //     arrayFavoritos = JSON.parse(recuperoStorage);
+        // }
+
+        //Te vas a otra pagina y haces esto mismo, le preguntas si hay algo y si hay algo lo parseas y lo traes al lugar y despues lo recorres
+        //en ese caso, cuando tenga q mostrarlo, vamos a usar un map porque te va a quedar un array con muchos id, que por cada id le pegue al endpoint de datos. 
+        // a dentro del map vamos a tener un fetch que vaya haciendo consultas
 
 
 // const TarjetaDetallePelicula = (props) => {
