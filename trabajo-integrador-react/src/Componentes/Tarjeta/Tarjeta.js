@@ -79,7 +79,7 @@ class Tarjeta extends Component {
                 </Link>
 
                 <div className='card-favdiv'>
-                <h2>{this.props.datosPelicula.title}</h2> 
+                <h2>{this.props.datosPelicula.title ?? this.props.datosPelicula.original_name}</h2> 
 
                 <i className={this.state.iconoFav} onClick={() => this.modificarFavoritos(this.props.datosPelicula.id)}></i>
                 </div>
