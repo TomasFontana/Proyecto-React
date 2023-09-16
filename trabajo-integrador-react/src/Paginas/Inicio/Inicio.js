@@ -18,7 +18,6 @@ class Inicio extends Component {
     };
 
     componentDidMount() {
-        //Buscamos datos
         fetch('https://api.themoviedb.org/3/movie/popular?api_key=1845c94396255a256363182ed898e8fc&language=en-US&page=1')
             .then(res => res.json())
             .then(data => this.setState({
@@ -85,39 +84,51 @@ class Inicio extends Component {
                     <p>{this.state.mensaje}</p>
                 </div>
 
-                {/* La siguiente linea es para mostrar el loader y el resto de la pagina cuando se cargan los datos y la logica de la pagina */}
                 {this.state.loader === true ?
                     <img src='../../img/loader.gif' alt="Loader"/>  :
                     <React.Fragment>
-                        <section className='ContenedorCarta'>
-                        {this.state.resultadosDeBusqueda.slice(0, 10).map((peliculaBuscada, idx) => <Tarjeta key={peliculaBuscada.title + idx} datosPelicula={peliculaBuscada} />)}
-                        </section>
+                        {this.state.resultadosDeBusqueda.length > 0 ? (
+                            <section className='ContenedorCarta'>
+                                {this.state.resultadosDeBusqueda.slice(0, 10).map((peliculaBuscada, idx) => <Tarjeta key={peliculaBuscada.title + idx} datosPelicula={peliculaBuscada} />)}
+                            </section>
+                        ):
+                        <>
+                            <div className='titulo-vermasall'>
+                            {/*  Seccion de peliculas*/}
+                                <h2 className="title-condiv">Peliculas Populares</h2>
+                                <Link to='/PeliculasTodas'>
+                                    Ver Todas
+                                </Link>
+                            </div>
+                            <section className='ContenedorCarta'>
+                                {
+                                    this.state.peliculas.slice(0,5)
+                                        .map((pelicula, idx) => <Tarjeta 
+                                            key={pelicula.title + idx} 
+                                            datosPelicula={pelicula}
+                                            categoria='pelicula'
+                                            />)
+                                }
+                            </section >
+                            
+                            {/* Seccion de Series */}
+                            <div className='titulo-vermasall'>
+                                <h2 className="titulo-series">Series Populares</h2>
+                                <Link to='/SeriesTodas'>
+                                    Ver Todas
+                                </Link>
+                            </div>
 
-                        {/*  Seccion de peliculas populares */}
-                        <div className='titulo-vermasall'>
-                            <h2 className="title-condiv">Peliculas Populares</h2>
-                            <Link to='/PeliculasTodas'>
-                                 Ver Todas
-                            </Link>
-                        </div>
-                        <section className='ContenedorCarta'>
-                            {
-                                this.state.peliculas.slice(0,5).map((pelicula, idx) => <Tarjeta key={pelicula.title + idx} datosPelicula={pelicula} />)
-                            }
-                        </section >
-                        
-                        {/* Seccion de peliculas en Estreno */}
-                        <div className='titulo-vermasall'>
-                            <h2 className="titulo-series">Series Populares</h2>
-                            <Link to='/SeriesTodas'>
-                                 Ver Todas
-                            </Link>
-                        </div>
-
-                        <section className='ContenedorCarta'>
-                            {this.state.seriesPopulares.slice(0,5).map((elm, idx) => <Tarjeta key={elm.title + idx} datosPelicula={elm} />)}
-                        </section>
-     
+                            <section className='ContenedorCarta'>
+                                {this.state.seriesPopulares.slice(0,5)
+                                    .map((elm, idx) => <Tarjeta 
+                                        key={elm.title + idx} 
+                                        datosPelicula={elm}
+                                        categoria='serie'
+                                        />)}
+                            </section>
+                        </>
+                    }
                     </React.Fragment>
                 }
             </main>
