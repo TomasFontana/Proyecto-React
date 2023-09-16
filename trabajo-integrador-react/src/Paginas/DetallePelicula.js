@@ -1,41 +1,41 @@
-import React, { Component } from "react";
-import { useEffect, useState } from "react"
-import TarjetaDetallePelicula from "../Componentes/DetallePelicula/TarjetaDetallePelicula"
-import { Form, useNavigate, useRoutes } from "react-router-dom"
-import { withRouter } from '../Componentes/WithRouter/WithRouter'
+// import React, { Component } from "react";
+// import { useEffect, useState } from "react"
+// import TarjetaDetallePelicula from "../Componentes/DetallePelicula/TarjetaDetallePelicula"
+// import { Form, useNavigate, useRoutes } from "react-router-dom"
+// import { withRouter } from '../Componentes/WithRouter/WithRouter'
 
 
-class DetallePelicula extends Component{
+// class DetallePelicula extends Component{
 
-    constructor(props){
-        super(props);
-        this.state = {
-            pelicula : undefined,
-        }
-    }
+//     constructor(props){
+//         super(props);
+//         this.state = {
+//             pelicula : undefined,
+//         }
+//     }
 
-    componentDidMount(){
-        const id = this.props.match.params.id
-        console.log(id)
+//     componentDidMount(){
+//         const id = this.props.match.params.id
+//         console.log(id)
 
-        fetch("https://api.themoviedb.org/3/movie/changes")
-        .then(response => response.json().then (data => this.setState({
-            pelicula: data
-        })))
+//         fetch("https://api.themoviedb.org/3/movie/changes")
+//         .then(response => response.json().then (data => this.setState({
+//             pelicula: data
+//         })))
         
-    }
+//     }
 
-    render(){
-        return(
-            <h1>Detalle Pelicula</h1>
-        )
-    }
+//     render(){
+//         return(
+//             <h1>Detalle Pelicula</h1>
+//         )
+//     }
 
 
 
-}
+// }
 
-export default withRouter(DetallePelicula); 
+// export default withRouter(DetallePelicula); 
 
 
 

@@ -20,7 +20,7 @@ function App() {
     <Route component={Favoritos} path="/Favoritos"/>
     <Route component={VerMasSeries} path="/SeriesTodas"/>
     <Route component={VerMasPeliculas} path="/PeliculasTodas"/>
-    <Route component={DetallePelicula} path="/detalle/movie/:id" />
+    <Route component={DetallePelicula} path="/detallePelicula/id/:id" />
     <Route component={DetalleSerie} path="/detalleSerie/id/:id" />
     <Route component={Error} path="" />
    </Switch>

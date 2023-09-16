@@ -1,96 +1,96 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 
 
-class TarjetaDetallePelicula extends Component {
+// class TarjetaDetallePelicula extends Component {
 
-    constructor(props){
-        super(props)
-        this.state = {
-            textoBoton: "Agregar a favoritos",
-            favoritos: []
+//     constructor(props){
+//         super(props)
+//         this.state = {
+//             textoBoton: "Agregar a favoritos",
+//             favoritos: []
 
-        }
-    }
-
-
-    //en que metodo un componente puede controlar algo apenas despues de renderizado -->didMount
-
-    componentDidMount(){
-        let arrayFavoritos = [];
-
-        let recuperoStorage = localStorage.getItem('favoritos')
-
-        if(recuperoStorage !== null){
-            arrayFavoritos = JSON.parse(recuperoStorage);
-
-            if(arrayFavoritos.includes(this.props.peliculas.id)){
-                this.setState({
-                    textoBoton: 'Quitar de favoritos'
-                })
-            }
-        }
-    }
-
-    agregarAFavoritos(id){
-        //Agregar un id dentro de un array y colocar ese array en localstorage
-        let arrayFavoritos = []
-        let recuperoStorage = localStorage.getItem('favoritos');
-
-        if(recuperoStorage !== null){
-            arrayFavoritos = JSON.parse(recuperoStorage);
-        }
-
-        if(arrayFavoritos.includes(this.props.peliculas.id)){
-            //Si el id esta en el array, queremos sacar el id
-
-            arrayFavoritos = arrayFavoritos.filter(unId => unId !== this.props.peliculas.id);
-            this.setState =({
-                textoBoton: "Agregar a favoritos"
-            })
-
-        } else {
-            arrayFavoritos.push(id);
-
-            this.setState({
-                textoBoton: "Quitar de favoritos"
-            })
-        }
-
-        //Subirlo a local storage  strigifeado
-        let arrayFavoritosAString = JSON.stringify(arrayFavoritos)
-        localStorage.setItem('favoritos', arrayFavoritosAString)
-    }
-
-    render(){
-        return(
-            <article className="listados">
-             <div>
-             <a href={`detail-movie.html?id=${this.props.pelicula.id}`}>
-                 <img className="portadas"src={`https://image.tmdb.org/t/p/w342/${this.props.pelicula.poster_path}`}alt={`${this.props.pelicula.title}`}/>
-                 </a>
-             </div>
-
-            <h3 className="titulos-peliculas"><a href={`detail-movie.html?id=${this.props.pelicula.id}`} className="a-titulo">{this.props.pelicula.title}</a></h3>
-            <button>Ver Mas</button>
-             <div>
-                 <p className="generos-texto">{this.props.pelicula.overview}</p>
-             </div>
-
-            <p>{this.props.pelicula.rating}</p>
-            <p>{this.props.pelicula.fechadeestreno}</p>
-            <p>{this.props.pelicula.duracion}</p>
-            <p>{this.props.pelicula.sinopsis}</p>
-            <p>{this.props.pelicula.genero}</p>
+//         }
+//     }
 
 
-            <button onClick={()=>this.agregarAFavoritos(this.props.pelicula.id)} type="button">{ this.state.textoBoton }</button>
+//     //en que metodo un componente puede controlar algo apenas despues de renderizado -->didMount
 
-            </article>
-        )
-    }
-}
+//     componentDidMount(){
+//         let arrayFavoritos = [];
 
-export default TarjetaDetallePelicula;
+//         let recuperoStorage = localStorage.getItem('favoritos')
+
+//         if(recuperoStorage !== null){
+//             arrayFavoritos = JSON.parse(recuperoStorage);
+
+//             if(arrayFavoritos.includes(this.props.peliculas.id)){
+//                 this.setState({
+//                     textoBoton: 'Quitar de favoritos'
+//                 })
+//             }
+//         }
+//     }
+
+//     agregarAFavoritos(id){
+//         //Agregar un id dentro de un array y colocar ese array en localstorage
+//         let arrayFavoritos = []
+//         let recuperoStorage = localStorage.getItem('favoritos');
+
+//         if(recuperoStorage !== null){
+//             arrayFavoritos = JSON.parse(recuperoStorage);
+//         }
+
+//         if(arrayFavoritos.includes(this.props.peliculas.id)){
+//             //Si el id esta en el array, queremos sacar el id
+
+//             arrayFavoritos = arrayFavoritos.filter(unId => unId !== this.props.peliculas.id);
+//             this.setState =({
+//                 textoBoton: "Agregar a favoritos"
+//             })
+
+//         } else {
+//             arrayFavoritos.push(id);
+
+//             this.setState({
+//                 textoBoton: "Quitar de favoritos"
+//             })
+//         }
+
+//         //Subirlo a local storage  strigifeado
+//         let arrayFavoritosAString = JSON.stringify(arrayFavoritos)
+//         localStorage.setItem('favoritos', arrayFavoritosAString)
+//     }
+
+//     render(){
+//         return(
+//             <article className="listados">
+//              <div>
+//              <a href={`detail-movie.html?id=${this.props.pelicula.id}`}>
+//                  <img className="portadas"src={`https://image.tmdb.org/t/p/w342/${this.props.pelicula.poster_path}`}alt={`${this.props.pelicula.title}`}/>
+//                  </a>
+//              </div>
+
+//             <h3 className="titulos-peliculas"><a href={`detail-movie.html?id=${this.props.pelicula.id}`} className="a-titulo">{this.props.pelicula.title}</a></h3>
+//             <button>Ver Mas</button>
+//              <div>
+//                  <p className="generos-texto">{this.props.pelicula.overview}</p>
+//              </div>
+
+//             <p>{this.props.pelicula.rating}</p>
+//             <p>{this.props.pelicula.fechadeestreno}</p>
+//             <p>{this.props.pelicula.duracion}</p>
+//             <p>{this.props.pelicula.sinopsis}</p>
+//             <p>{this.props.pelicula.genero}</p>
+
+
+//             <button onClick={()=>this.agregarAFavoritos(this.props.pelicula.id)} type="button">{ this.state.textoBoton }</button>
+
+//             </article>
+//         )
+//     }
+// }
+
+// export default TarjetaDetallePelicula;
 
         // let arrayFavoritos = []
         // let recuperoStorage = localStorage.getItem('favoritos');
