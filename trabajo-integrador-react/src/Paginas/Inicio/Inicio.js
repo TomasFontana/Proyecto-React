@@ -89,7 +89,7 @@ class Inicio extends Component {
                     <React.Fragment>
                         {this.state.resultadosDeBusqueda.length > 0 ? (
                             <section className='ContenedorCarta'>
-                                {this.state.resultadosDeBusqueda.slice(0, 10).map((peliculaBuscada, idx) => <Tarjeta key={peliculaBuscada.title + idx} datosPelicula={peliculaBuscada} />)}
+                                {this.state.resultadosDeBusqueda.slice(0, 10).map((peliculaBuscada, idx) => <Tarjeta categoria={'pelicula'} key={peliculaBuscada.title + idx} datosPelicula={peliculaBuscada} />)}
                             </section>
                         ):
                         <>

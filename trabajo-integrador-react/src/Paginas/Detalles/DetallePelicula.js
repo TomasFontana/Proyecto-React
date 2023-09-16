@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import './Detalle.css'
 
 class DetallePelicula extends Component{
 
@@ -30,9 +30,13 @@ class DetallePelicula extends Component{
                 {this.state.pelicula? (
                     <div style={{color: 'white'}}>
                         {/* SECCION DONDE PONER LOS DETALLES */}
-                        <h1>Detalle Pelicula</h1>
-                        <p>{this.state.pelicula.title}</p>
+                        <h1>{this.state.pelicula.title}</h1>
                         <img src={`https://image.tmdb.org/t/p/w500/${this.state.pelicula.poster_path}`} alt='poster' />
+                        <p>Calificación: {this.state.pelicula.vote_average}</p>
+                        <p>Fecha de Estreno: {this.state.pelicula.release_date}</p>
+                        <p>Duración: {this.state.pelicula.runtime}</p>
+                        <p>Sinópsis: {this.state.pelicula.overview}</p>
+                        <p>Género: {this.state.pelicula.genres[0].name}</p>
                     </div>
                     )
                 : 

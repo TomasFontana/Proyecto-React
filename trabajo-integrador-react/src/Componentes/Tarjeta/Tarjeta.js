@@ -74,7 +74,7 @@ class Tarjeta extends Component {
         return (
             <article className='movie-card'>
 
-                <Link to={`/detallePelicula/id/${this.props.datosPelicula.id}`}>
+                <Link to={`/detallePelicula/id/${this.props.datosPelicula.id}` }>
                     <img alt={`Foto de ${this.props.datosPelicula.title}`} src={`https://image.tmdb.org/t/p/w500/${this.props.datosPelicula.poster_path}`} />
                 </Link>
 
