@@ -71,17 +71,14 @@ class VerMasSeries extends Component {
         return (
             <main>
                 <div className="buscador-home">
-                    <h2>Filtro:</h2>
-                    <form onSubmit={(event) => this.noSubmit(event)}>
-                        <input type="text" onChange={(event) => this.eventoCambiosBusqueda(event)} value={this.state.valor} />
-                        <button type='submit'><i className="fa-solid fa-filter"></i></button>
-                    </form>
+                    
+                    
                     <p>{this.state.mensaje}</p>
                 </div>
                 {this.state.loader === true ?
                     <img src='../../images/loader.gif' alt="Loader"/> :
                     <React.Fragment>
-                        <h2 className='title-home'>Todas las Series</h2>
+                        <h2 className='title-home'>Series</h2>
 
                         <section className='TarjetaContainer'>
                             {this.state.seriesPopulares.map((unaSerie, idx) => <Tarjeta key={unaSerie + idx} datosPelicula={unaSerie} />)}

@@ -1,32 +1,29 @@
 import React from "react";
 import Navbar from "./Componentes/Navbar/Navbar";
 import Footer from './Componentes/Footer/Footer';
-import { Route, Routes } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 //import HomePage from "./Paginas/Inicio";
 import "./App.css";
-import ResultadosBusquedaPage from "./Paginas/ResultadosBusqueda";
-import DetallePelicula from "./Paginas/DetallePelicula";
-import PeliculasPopulares from "./Paginas/PeliculasPopulares";
+import DetallePelicula from "./Paginas/Detalles/DetallePelicula";
 import Favoritos from "./Paginas/Favoritos/Favoritos";
 import Error from "./Componentes/Error/Error";
 import Inicio from "./Paginas/Inicio/Inicio";
 import VerMasSeries from "./Paginas/VerMasSeries/VerMasSeries";
 import VerMasPeliculas from "./Paginas/VerMasPeliculas/VerMasPeliculas";
+import DetalleSerie from "./Paginas/Detalles/DetalleSerie";
 
 
 function App() {
   return (
-   <Routes>
-    <Route element={<Inicio/>} path="/" />
-    <Route element={<ResultadosBusquedaPage/>} path="/busqueda/:clave" />
-    <Route element={<DetallePelicula/>} path="/detalle/movie/:id" />
-    <Route element={<PeliculasPopulares/>} path="/PeliculasPopulares"/>
-    <Route element={<Favoritos/>} path="/Favoritos"/>
-    <Route element={<VerMasSeries/>} path="/SeriesTodas"/>
-    <Route element={<VerMasPeliculas/>} path="/PeliculasTodas"/>
-    <Route element={<h1>Nosotros</h1>} path="/nosotros" />
-    <Route component={<Error/>} path="" />
-   </Routes>
+   <Switch>
+    <Route component={Inicio} path="/" exact/>
+    <Route component={Favoritos} path="/Favoritos"/>
+    <Route component={VerMasSeries} path="/SeriesTodas"/>
+    <Route component={VerMasPeliculas} path="/PeliculasTodas"/>
+    <Route component={DetallePelicula} path="/detalle/movie/:id" />
+    <Route component={DetalleSerie} path="/detalleSerie/id/:id" />
+    <Route component={Error} path="" />
+   </Switch>
   );
 }
 

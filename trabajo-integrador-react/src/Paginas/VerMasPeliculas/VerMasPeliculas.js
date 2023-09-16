@@ -71,17 +71,13 @@ class VerMasPeliculas extends Component {
         return (
             <main>
                 <div className="buscador-home">
-                    <h2>Filtro:</h2>
-                    <form onSubmit={(event) => this.noSubmit(event)}>
-                        <input type="text" onChange={(event) => this.controlarCambios(event)} value={this.state.valor} />
-                        <button type='submit'><i className="fa-solid fa-filter"></i></button>
-                    </form>
+                    
                     <p>{this.state.mensaje}</p>
                 </div>
                 {this.state.loader === true ?
                     <img src='../../images/loader.gif' alt="Loader"/> :
                     <React.Fragment>
-                        <h2 className='title-home'>Popular movies</h2>
+                        <h2 className='title-home'>Peliculas</h2>
 
                         <section className='cardContainer'>
                             {this.state.popularMovies.map((unaPelicula, idx) => <Tarjeta key={unaPelicula + idx} datosPelicula={unaPelicula} />)}

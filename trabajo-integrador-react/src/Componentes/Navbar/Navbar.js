@@ -12,8 +12,8 @@ function Navbar (){
             <ul className="main-nav">
                <li><Link to="/">Inicio</Link></li>
                <li><Link to="/favoritos">Favoritos</Link></li>
-               <li><Link to="/PeliculasPopulares">Peliculas populares</Link></li>
-               <li><Link to="/PeliculasCartel">Cartelera</Link></li>
+               <li><Link to="/PeliculasTodas">Peliculas</Link></li>
+               <li><Link to="/SeriesTodas">Series</Link></li>            
             </ul>
 
         </nav>

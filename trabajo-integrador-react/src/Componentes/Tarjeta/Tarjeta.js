@@ -2,11 +2,15 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './tarjeta.css'
 
-class Card extends Component {
+class Tarjeta extends Component {
     constructor(props) {
         super(props)
         this.state = {
             mas: false,
+            urlDetalle: props.categoria === 'pelicula'? 
+            `/detallePelicula/id`
+            :
+            `/detalleSerie/id`,
             iconoFav: 'fa-regular fa-heart'
         }
     }
@@ -71,19 +75,15 @@ class Card extends Component {
             <article className='movie-card'>
 
                 <Link to={`/detallePelicula/id/${this.props.datosPelicula.id}`}>
-                    {/*  poster.path es la ruta de la imagen */}
                     <img alt={`Foto de ${this.props.datosPelicula.title}`} src={`https://image.tmdb.org/t/p/w500/${this.props.datosPelicula.poster_path}`} />
                 </Link>
 
                 <div className='card-favdiv'>
-                    {/* Nombre */}
                 <h2>{this.props.datosPelicula.title}</h2> 
 
-                {/*  Metodo para agregar a favoritos */}
                 <i className={this.state.iconoFav} onClick={() => this.modificarFavoritos(this.props.datosPelicula.id)}></i>
                 </div>
-                    {/* La etiqueta link es para que cuando se haga click en el titulo "Go to Deatils" de la pelicula se vaya a la pagina de detalle */}
-                    <Link to={`/detallePelicula/id/${this.props.datosPelicula.id}`}>
+                    <Link to={`${this.state.urlDetalle}/${this.props.datosPelicula.id}`}>
                         <p>Ir a Detalle</p>
                     </Link>
                     
@@ -93,7 +93,7 @@ class Card extends Component {
                         <p className='mas' onClick={() => this.verMas()}>Ver Menos</p>
                     </React.Fragment>
                     :
-                    <p className='mas' onClick={() => this.verMas()}>Ver mas</p>
+                    <p className='mas' onClick={() => this.verMas()}>Ver Mas</p>
                 }
 
             </article>
@@ -103,4 +103,4 @@ class Card extends Component {
 
 }
 
-export default Card
+export default Tarjeta
