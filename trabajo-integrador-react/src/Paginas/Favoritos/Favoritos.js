@@ -87,7 +87,7 @@ class Favoritos extends Component {
                                         ></i>
                                         </div>
                                         <Link to={`/detallePelicula/id/${unaPelicula.id}`}>
-                                            <p> Ver detalles </p>
+                                            <p className='verDetalles'> Ver detalles </p>
                                         </Link>
                                         <p className='mas'>Ver más</p>
                                     </article>

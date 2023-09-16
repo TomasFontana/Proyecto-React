@@ -84,7 +84,7 @@ class VerMasPeliculas extends Component {
                         </section>
                         {this.state.cargarMas === true?
                         <div className='div-vermas'>
-                            <button className='load-more' onClick={() => this.verMas()}>Load More</button>
+                            <button className='load-more' onClick={() => this.verMas()}>Cargar Mas</button>
                         </div>: null}
                     </React.Fragment>
                 }
